@@ -24,7 +24,7 @@ def slackRequest(method, params={}):
 @app.route("/")
 def index():
 	# I'm so sorry
-	return '<a href="https://slack.com/oauth/authorize?scope=commands,users:read&client_id=2323751764.23663576083"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a> Talk to @raphael if this breaks!'
+	return '<a href="https://slack.com/oauth/authorize?scope=commands,users:read&client_id=%s"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a> Talk to @raphael if this breaks!' % CLIENT_ID
 
 @app.route("/oauth")
 def oauth():
